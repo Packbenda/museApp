@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h3 style = "margin-bottom: 20px"><strong>Pick Your Choice</strong></h3>
+
+<form method="POST" action="{% url 'result' question.id %}">
+  {% csrf_token %}
+<ul class="list-group" style="margin:0px">
+    <label>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name = 'choice' value="{{option.id}}" aria-label="...">
+            {{song1}}
+          </li>
+    </label>
+ 
+
+</ul>
+<input type="submit" value = "Submit" class = 'btn btn-primary'>
+</form>
+
+{% endblock %}
