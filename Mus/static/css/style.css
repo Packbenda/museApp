@@ -17,3 +17,12 @@
 label,li,input{
     cursor: pointer
 }
+
+h3,h1{
+    color:#ececfe;
+    background-color: black;
+    opacity:0.5;
+    width:60%;
+    margin-top:1%;
+    margin-left:5%
+}

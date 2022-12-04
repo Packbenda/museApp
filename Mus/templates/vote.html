@@ -4,42 +4,19 @@
 
 <h3 style = "margin-bottom: 20px"><strong>Pick Your Choice</strong></h3>
 
-<h4>{{question.question}}</h4>
-
-
-
-<div id='top' class="jumbotron">
-    <div class="container-fluid" id="jumbo-dialog">
-      <div class='intro-form' id='login-form'>
-          <p> To get started, login with your Spotify
-          </p>
-          <p><a class="btn btn-primary btn-lg" id='login-button'
-                      role="button">Login with Spotify</a></p>
-      </div>
-    </div>
-  </div>
-
-
-
 <form method="POST" action="{% url 'result' question.id %}">
   {% csrf_token %}
 <ul class="list-group" style="margin:0px">
-    {% for option in options %}
-    
     <label>
         <li class="list-group-item">
             <input class="form-check-input me-1" type="radio" name = 'choice' value="{{option.id}}" aria-label="...">
-            {{option.option}}
+            {{song1}}
           </li>
     </label>
-    {% endfor %}
+ 
 
-    
 </ul>
 <input type="submit" value = "Submit" class = 'btn btn-primary'>
 </form>
-
-
-
 
 {% endblock %}
