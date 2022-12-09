@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h3 style = "margin-bottom: 20px"><strong> Your Playlist has been successfully Created</strong></h3>
+
+<ul class="list-group" style="margin:0px">
+    {% for i in L %}
+    <label>
+        <li class="list-group-item">
+            {{i}}
+        </li>
+    </label>
+    {% endfor %}
+
+</ul>
+
+<div>
+
+    <h4> Share this link with your friend </h4>
+
+    <a href="{% url 'vote' question.id%}" > Rejoindre la salle de vote</a>
+ 
+</div>
+{% endblock %}
+
+
